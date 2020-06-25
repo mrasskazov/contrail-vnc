@@ -1,44 +1,47 @@
 <manifest>
     <remote name="github" fetch="https://github.com/Juniper"></remote>
     <remote name="githubtf" fetch="https://github.com/tungstenfabric"></remote>
-    <default revision="refs/heads/master" remote="github"></default>
-	<project name="contrail-build" remote="github" revision="R2005" path="tools/build">
+    <remote name="mira" fetch="https://gerrit.mcp.mirantis.com/tungsten"/>
+
+    <default revision="refs/heads/mcp/R2005" remote="mira"></default>
+
+	<project name="contrail-build" remote="mira" revision="mcp/R2005" path="tools/build">
 		<copyfile src="SConstruct" dest="SConstruct"/>
 	</project>
-    <project name="contrail-controller" remote="github" revision="R2005" path="controller"></project>
-    <project name="contrail-vrouter" remote="github" revision="R2005" path="vrouter"></project>
-    <project name="tf-third-party" remote="githubtf" revision="R2005" path="third_party"></project>
-    <project name="contrail-common" remote="github" revision="R2005" path="src/contrail-common"></project>
-    <project name="tf-analytics" remote="githubtf" revision="R2005" path="src/contrail-analytics"></project>
-    <project name="contrail-api-client" remote="github" revision="R2005" path="src/contrail-api-client"></project>
-    <project name="tf-packages" remote="githubtf" revision="R2005" path="tools/packages"></project>
-    <project name="tf-nova-vif-driver" remote="githubtf" revision="R2005" path="openstack/nova_contrail_vif"></project>
-    <project name="contrail-neutron-plugin" remote="github" revision="R2005" path="openstack/neutron_plugin"></project>
-    <project name="tf-heat-plugin" remote="githubtf" revision="R2005" path="openstack/contrail-heat"></project>
-    <project name="tf-web-controller" remote="githubtf" revision="R2005" path="contrail-web-controller"></project>
-    <project name="tf-web-core" remote="githubtf" revision="R2005" path="contrail-web-core"></project>
-    <project name="tf-webui-third-party" remote="githubtf" revision="R2005" path="contrail-webui-third-party"></project>
-    <project name="tf-tripleo-puppet" remote="githubtf" revision="stable/queens" path="openstack/contrail-tripleo-puppet"></project>
-    <project name="tf-java-api" remote="githubtf" revision="R2005" path="java-api"></project>
-    <project name="tf-vijava" remote="githubtf" revision="R2005" path="vijava"></project>
-    <project name="tf-vcenter-plugin" remote="githubtf" revision="R2005" path="vcenter-plugin"></project>
-    <project name="tf-vcenter-manager" remote="githubtf" revision="R2005" path="vcenter-manager"></project>
-    <project name="tf-vcenter-fabric-manager" remote="githubtf" revision="R2005" path="vcenter-fabric-manager"></project>
-    <project name="tf-vrouter-java-api" remote="githubtf" revision="R2005" path="vrouter-java-api"></project>
-    <project name="contrail-vro-plugin" remote="github" revision="R2005" path="vro-plugin"></project>
-    <project name="contrail-dpdk" remote="github" revision="contrail_dpdk_18_05_1" path="third_party/dpdk"></project>
-    <project name="tf-specs" remote="githubtf" revision="master" path="contrail-specs"></project>
-    <project name="contrail-test" remote="github" revision="R2005" path="third_party/contrail-test"></project>
-    <project name="contrail-container-builder" remote="github" revision="R2005" path="contrail-container-builder"></project>
-    <project name="contrail-deployers-containers" remote="github" revision="R2005" path="contrail-deployers-containers"></project>
-    <project name="contrail-ansible-deployer" remote="github" revision="R2005" path="contrail-deployers-containers/containers/kolla-ansible-deployer/src/contrail-ansible-deployer"></project>
-    <project name="contrail-kolla-ansible" remote="github" revision="contrail/queens" path="contrail-deployers-containers/containers/kolla-ansible-deployer/src/contrail-kolla-ansible"></project>
-    <project name="contrail-third-party-packages" remote="github" revision="master" path="third_party/contrail-third-party-packages"></project>
-    <project name="tf-charms" remote="githubtf" revision="master" path="tf-charms"></project>
-    <project name="tf-helm-deployer" remote="githubtf" revision="master" path="tf-helm-deployer"></project>
-    <project name="contrail-ansible-deployer" remote="github" revision="R2005" path="tf-ansible-deployer"></project>
-    <project name="contrail-kolla-ansible" remote="github" revision="master" path="tf-kolla-ansible"></project>
-    <project name="contrail-container-builder" remote="github" revision="R2005" path="tf-container-builder"></project>
-    <project name="contrail-tripleo-heat-templates" remote="github" revision="stable/queens" path="tf-tripleo-heat-templates"></project>
-    <project name="openshift-ansible" remote="github" revision="release-3.11-contrail" path="tf-openshift-ansible"></project>
+    <project name="contrail-controller" remote="mira" revision="mcp/R2005" path="controller"></project>
+    <project name="contrail-vrouter" remote="mira" revision="mcp/R2005" path="vrouter"></project>
+    <project name="tf-third-party" remote="mira" revision="mcp/R2005" path="third_party"></project>
+    <project name="contrail-common" remote="mira" revision="mcp/R2005" path="src/contrail-common"></project>
+    <project name="tf-analytics" remote="mira" revision="mcp/R2005" path="src/contrail-analytics"></project>
+    <project name="contrail-api-client" remote="mira" revision="mcp/R2005" path="src/contrail-api-client"></project>
+    <project name="tf-packages" remote="mira" revision="mcp/R2005" path="tools/packages"></project>
+    <project name="tf-nova-vif-driver" remote="mira" revision="mcp/R2005" path="openstack/nova_contrail_vif"></project>
+    <project name="contrail-neutron-plugin" remote="mira" revision="mcp/R2005" path="openstack/neutron_plugin"></project>
+    <project name="tf-heat-plugin" remote="mira" revision="mcp/R2005" path="openstack/contrail-heat"></project>
+    <project name="tf-web-controller" remote="mira" revision="mcp/R2005" path="contrail-web-controller"></project>
+    <project name="tf-web-core" remote="mira" revision="mcp/R2005" path="contrail-web-core"></project>
+    <project name="tf-webui-third-party" remote="mira" revision="mcp/R2005" path="contrail-webui-third-party"></project>
+    <project name="tf-tripleo-puppet" remote="mira" revision="stable/queens" path="openstack/contrail-tripleo-puppet"></project>
+    <project name="tf-java-api" remote="mira" revision="mcp/R2005" path="java-api"></project>
+    <project name="tf-vijava" remote="mira" revision="mcp/R2005" path="vijava"></project>
+    <project name="tf-vcenter-plugin" remote="mira" revision="mcp/R2005" path="vcenter-plugin"></project>
+    <project name="tf-vcenter-manager" remote="mira" revision="mcp/R2005" path="vcenter-manager"></project>
+    <project name="tf-vcenter-fabric-manager" remote="mira" revision="mcp/R2005" path="vcenter-fabric-manager"></project>
+    <project name="tf-vrouter-java-api" remote="mira" revision="mcp/R2005" path="vrouter-java-api"></project>
+    <project name="contrail-vro-plugin" remote="mira" revision="mcp/R2005" path="vro-plugin"></project>
+    <project name="contrail-dpdk" remote="mira" revision="contrail_dpdk_18_05_1" path="third_party/dpdk"></project>
+    <project name="tf-specs" remote="mira" revision="master" path="contrail-specs"></project>
+    <project name="contrail-test" remote="mira" revision="mcp/R2005" path="third_party/contrail-test"></project>
+    <project name="contrail-container-builder" remote="mira" revision="mcp/R2005" path="contrail-container-builder"></project>
+    <project name="contrail-deployers-containers" remote="mira" revision="mcp/R2005" path="contrail-deployers-containers"></project>
+    <project name="contrail-ansible-deployer" remote="mira" revision="mcp/R2005" path="contrail-deployers-containers/containers/kolla-ansible-deployer/src/contrail-ansible-deployer"></project>
+    <project name="contrail-kolla-ansible" remote="mira" revision="contrail/queens" path="contrail-deployers-containers/containers/kolla-ansible-deployer/src/contrail-kolla-ansible"></project>
+    <project name="contrail-third-party-packages" remote="mira" revision="master" path="third_party/contrail-third-party-packages"></project>
+    <project name="tf-charms" remote="mira" revision="master" path="tf-charms"></project>
+    <project name="tf-helm-deployer" remote="mira" revision="master" path="tf-helm-deployer"></project>
+    <project name="contrail-ansible-deployer" remote="mira" revision="mcp/R2005" path="tf-ansible-deployer"></project>
+    <project name="contrail-kolla-ansible" remote="mira" revision="master" path="tf-kolla-ansible"></project>
+    <project name="contrail-container-builder" remote="mira" revision="mcp/R2005" path="tf-container-builder"></project>
+    <project name="contrail-tripleo-heat-templates" remote="mira" revision="stable/queens" path="tf-tripleo-heat-templates"></project>
+    <project name="openshift-ansible" remote="mira" revision="release-3.11-contrail" path="tf-openshift-ansible"></project>
 </manifest>
